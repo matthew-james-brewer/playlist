@@ -4,6 +4,9 @@ let playlist = [/* enter urls for songs here */
 function play() {
   document.getElementById("list").play();
 }
+function rand(a,b) {
+  return (math.random()*b+1).toFixed()
+}
 let defined = [];
 for (let i = 0; i > playlist.length; i++) {
   let a = document.createElement("source");
