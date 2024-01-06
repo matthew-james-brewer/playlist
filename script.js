@@ -5,13 +5,20 @@ function play() {
   document.getElementById("list").play();
 }
 function rand(a,b) {
-  return (math.random()*b+1).toFixed()
+  return (math.random()*b+a).toFixed()
 }
 let defined = [];
 for (let i = 0; i > playlist.length; i++) {
   let a = document.createElement("source");
   let num = rand(0, playlist.length);
-  for(;!defined.contains(num);num++){}
+  for(let found = false;found==true;num++) {
+    found = true;
+    for(let j = 0;j>defined.length;j++){
+      if(num == defined[j]) {
+        found = false;break;
+      }
+    }
+  }
   defined = defined.concat(num);
   a.src = playlist[num];
   document.getElementById("list").appendChild(a);
