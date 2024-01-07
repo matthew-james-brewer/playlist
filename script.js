@@ -5,7 +5,7 @@ function play() {
   document.getElementById("list").play();
 }
 function rand(a,b) {
-  return (math.random()*b+a).toFixed()
+  return (Math.random()*b+a).toFixed()
 }
 let defined = [];
 for (let i = 0; i > playlist.length; i++) {
